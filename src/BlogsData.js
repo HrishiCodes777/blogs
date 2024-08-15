@@ -1,5 +1,5 @@
 // src/BlogsData.js
-const blogs = [
+const initialBlogs = [
     {
       id: 1,
       title: 'Understanding React Hooks',
@@ -23,5 +23,5 @@ const blogs = [
     },
   ];
   
-  export default blogs;
+  export default initialBlogs;
   

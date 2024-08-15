@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { BlogContext } from './BlogContext';
 
-function BlogDetail({blogs}) {
+function BlogDetail() {
 
     const {id} = useParams();
+    const {blogs} = useContext(BlogContext)
     const blog = blogs.find(blog => blog.id === parseInt(id));
 
     if(!blog){

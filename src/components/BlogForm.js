@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-function BlogForm({addBlog,blogs}) {
+import { BlogContext } from './BlogContext';
+function BlogForm() {
     const navigate = useNavigate();
+    const {addBlog,blogs} = useContext(BlogContext);
 
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
