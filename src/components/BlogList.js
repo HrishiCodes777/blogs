@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import { BlogContext } from './BlogContext';
+import SearchBar from './SearchBar';
 
 function BlogList() {
     const { blogs } = useContext(BlogContext);
@@ -10,6 +11,7 @@ function BlogList() {
 
     return (
     <div>
+        <SearchBar/>
         <h2>Blog Posts</h2>
         <ul className='blog-list'>
         {blogs.map(blog => (

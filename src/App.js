@@ -6,14 +6,12 @@ import BlogDetail from './components/BlogDetail';
 import BlogForm from './components/BlogForm';
 import { BlogProvider } from './components/BlogContext';
 import Home from './components/Home';
-import SearchBar from './components/SearchBar';
 function App() {
   return (
     <BrowserRouter>
       <div className='App'>
         <BlogProvider>
           <Layout>
-            <SearchBar/>
             <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/blogs' element={<BlogList />}/>
