@@ -1,21 +1,40 @@
 /* src/App.css */
-body {
-  font-family: Arial, sans-serif;
+
+/* Color Variables */
+:root {
+  --primary-bg-color: #333;
+  --secondary-bg-color: #424141;
+  --text-color: #fff;
+  --link-color: #fff;
+  --hover-transform: translateY(-5px);
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* General Styles */
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  padding: 20px;
   text-align: center;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -24,20 +43,66 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 main {
+  background-color: var(--secondary-bg-color);
   padding: 20px;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
+/* Footer */
 footer {
-  background-color: #333;
-  color: white;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
   text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
+  padding: 8px;
   width: 100%;
+  box-sizing: border-box; /* Ensure footer width includes padding */
+}
+
+
+/* BlogList Styles */
+.blog-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog {
+  background-color: var(--primary-bg-color);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.2s ease-in-out;
+}
+
+.blog:hover {
+  transform: var(--hover-transform);
+}
+
+.blog-title {
+  margin: 0 0 10px;
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+
+.blog p {
+  color: var(--text-color);
+  font-size: 0.9em;
+  margin: 0;
+}
+
+/* BlogList Styles */
+.blog-title-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.blog-title-link:hover {
+  text-decoration: underline;
 }
