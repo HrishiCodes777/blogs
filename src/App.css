@@ -199,3 +199,45 @@ button {
 button:hover {
   transform: var(--hover-transform);
 }
+
+
+/* src/App.css */
+
+/* Home Page Styles */
+.home {
+  text-align: center;
+  padding: 50px;
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+}
+
+.home h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-button {
+  background-color: var(--link-color);
+  color: var(--primary-bg-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #555;
+}
+

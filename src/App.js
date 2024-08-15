@@ -5,6 +5,7 @@ import BlogList from './components/BlogList';
 import BlogDetail from './components/BlogDetail';
 import BlogForm from './components/BlogForm';
 import { BlogProvider } from './components/BlogContext';
+import Home from './components/Home';
 function App() {
   return (
     <BrowserRouter>
@@ -12,7 +13,7 @@ function App() {
         <BlogProvider>
           <Layout>
             <Routes>
-              <Route path='/' element={<h1>Home Page</h1>}/>
+              <Route path='/' element={<Home/>}/>
               <Route path='/blogs' element={<BlogList />}/>
               <Route path="/blog/:id" element={<BlogDetail />}/>
               <Route path="/create" element={<BlogForm />}/>
