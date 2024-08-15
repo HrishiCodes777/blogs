@@ -9,10 +9,12 @@
   --hover-transform: translateY(-5px);
   --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 /* General Styles */
 html, body {
   height: 100%;
   margin: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow on both html and body */
 }
 
 body {
@@ -48,13 +50,12 @@ nav ul li a {
 }
 
 main {
-  background-color: var(--secondary-bg-color);
+  flex-grow: 1; /* Allow main to take up available space */
   padding: 20px;
-  height: 100vh;
+  background-color: var(--secondary-bg-color);
   overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-/* Footer */
 footer {
   background-color: var(--primary-bg-color);
   color: var(--text-color);
@@ -62,8 +63,8 @@ footer {
   padding: 8px;
   width: 100%;
   box-sizing: border-box; /* Ensure footer width includes padding */
+  margin-top: auto; /* Push footer to the bottom */
 }
-
 
 /* BlogList Styles */
 .blog-list {
@@ -110,7 +111,7 @@ footer {
 /* BlogDetail Styles */
 .blog-detail {
   background-color: var(--primary-bg-color);
-  color: var(--text-color);
+  color: var (--text-color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: var(--box-shadow);
@@ -130,4 +131,71 @@ footer {
 
 .blog-detail-content {
   font-size: 0.9em;
+}
+
+/* BlogForm Styles */
+.blog-form-container {
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.blog-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.blog-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-input label {
+  margin-bottom: 5px;
+}
+
+.blog-input input,
+.blog-input textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.blog-input input:focus,
+.blog-input textarea:focus {
+  outline: none;
+  background-color: #555;
+}
+
+.blog-input.blog-textarea textarea {
+  resize: none;
+  height: 150px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--link-color);
+  color: var(--primary-bg-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: var(--hover-transform);
 }

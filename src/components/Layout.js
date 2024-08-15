@@ -15,9 +15,9 @@ function Layout({children}) {
       <main>
         {children}
       </main>
-      <footer>
+      {/* <footer>
         <p>&copy; 2024 Blog Project</p>
-      </footer>
+      </footer> */}
     </div>
   )
 }

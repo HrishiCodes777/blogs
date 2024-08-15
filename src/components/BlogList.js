@@ -1,10 +1,9 @@
 // src/components/BlogList.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import blogs from '../BlogsData';
 import '../App.css';
 
-function BlogList() {
+function BlogList({blogs}) {
   return (
     <div>
       <h2>Blog Posts</h2>

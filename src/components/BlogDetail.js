@@ -1,8 +1,7 @@
 import React from 'react';
-import blogs from '../BlogsData';
 import { useParams } from 'react-router-dom';
 
-function BlogDetail() {
+function BlogDetail({blogs}) {
 
     const {id} = useParams();
     const blog = blogs.find(blog => blog.id === parseInt(id));
