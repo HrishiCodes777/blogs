@@ -97,7 +97,7 @@ footer {
   margin: 0;
 }
 
-/* BlogList Styles */
+/* Blog Title Link */
 .blog-title-link {
   color: var(--text-color);
   text-decoration: none;
@@ -105,4 +105,29 @@ footer {
 
 .blog-title-link:hover {
   text-decoration: underline;
+}
+
+/* BlogDetail Styles */
+.blog-detail {
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  margin: 20px 0;
+}
+
+.blog-detail-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.blog-detail-author,
+.blog-detail-date {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.blog-detail-content {
+  font-size: 0.9em;
 }
